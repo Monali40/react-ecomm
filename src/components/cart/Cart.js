@@ -33,7 +33,7 @@ export default function Cart() {
 
   const submitOrder = async () => {
     if (flag < 2) {
-      navigate("/ecomm-react/login");
+      navigate("/react-ecomm/login");
     } else {
       // order.date = Date().slice(0, 15);
       order.email = user.email;
@@ -45,7 +45,7 @@ export default function Cart() {
       // setOrders((prev) => [...prev, order]);
       const res = await axios.post(`${API}/orders/add`,order)
       setCartItems(() => []);
-      navigate("/ecomm-react/order");
+      navigate("/react-ecomm/order");
     }
   };
 
